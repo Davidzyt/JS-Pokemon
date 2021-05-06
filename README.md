@@ -1,5 +1,7 @@
 https://davidzyt.github.io/JS-Pokemon/
 
+(This project uses [pokemon](https://pokeapi.co/) api)
+
 
 # AJAX Pokédex
 

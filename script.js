@@ -1,21 +1,12 @@
-const button=document.getElementById("run");
-
-button.addEventListener("click",function (){
-    let dobYear=document.getElementById("dob-year");
-    let dobMonth=document.getElementById("dob-month");
-    let dobDate=document.getElementById("dob-day");
-
-    let currentTime=new Date();
-    let currentYear=currentTime.getFullYear();
-    let currentMonth=currentTime.getMonth();
-    let currentDate=currentTime.getDate();
-
-
-    console.log(dobYear);
-
-
-
-
-})
-
-
+if(2>1){
+    x=1;
+    y=2;
+    z=3;
+    if(x<y){
+        z=4;
+    }
+    else{
+        z=5;
+    }
+}
+console.log(x,y,z);
