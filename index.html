@@ -1,24 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pokemon Game</title>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css">
+
+    <title>Pokemon Game</title>
 </head>
 <body>
+<div class="main-wrap">
+    <div class="left">
 
-<div class="container" id="target">
+        <div class="btn-wrap">
+            <div class="btn-round__wrap">
+                <div class="btn-round">
+                    <div class="btn-round__inner"></div>
+                </div>
+            </div>
+            <div class="dpad_wrap">
+                <div class="dpad_top d-btn">X</div>
+                <div class="dpad_right d-btn">Y</div>
+                <div class="dpad_bot d-btn">B</div>
+                <div class="dpad_left d-btn">A</div>
+            </div>
+        </div>
 
-    <div class="poke-name" id="poke-name"></div>
-    <div class="poke-id" id="poke-id"></div>
-    <img src="" class="poke-image" id="poke-image">
-    <div class="poke-move-one" id="poke-move-one"></div>
-    <div class="poke-move-two" id="poke-move-two"></div>
-    <div class="poke-move-three" id="poke-move-three"></div>
-    <div class="poke-move-four" id="poke-move-four"></div>
+    </div>
+    <div class="center">
+        <div class="screen">
 
+            <div class="input-wrap">
+                <form action="#" method="post">
+                    <div class="field">
+                        <img class="logo" src="img/pokeball.png" alt="" />
+                        <input
+                                type="text"
+                                name="pokemon-id"
+                                id="input"
+                                placeholder="Search by Poke Name/ID"
+                        />
+                        <button type="button" id="run">Search</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="main_wrap">
+                <div class="output-wrap">
+                    <img src="#" alt="" id="output_img" />
+                    <p id="output_name"></p>
+                    <p id="output_id"></p>
+
+                    <p id="output_moves"></p>
+                </div>
+
+
+                <div class="moves-wrap">
+                    <div class="moves_item" id="move_1"></div>
+                    <div class="moves_item" id="move_2"></div>
+                    <div class="moves_item" id="move_3"></div>
+                    <div class="moves_item" id="move_4"></div>
+                    <div class="moves_item" id="move_5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="btn-wrap">
+            <div class="dpad_wrap second">
+                <div class="dpad_top d-btn">X</div>
+                <div class="dpad_right d-btn">Y</div>
+                <div class="dpad_bot d-btn">B</div>
+                <div class="dpad_left d-btn">A</div>
+            </div>
+            <div class="btn-round__wrap">
+                <div class="btn-round">
+                    <div class="btn-round__inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>

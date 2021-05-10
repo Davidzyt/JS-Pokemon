@@ -1,18 +1,36 @@
+const button=document.getElementById("run");
+let pokemonID;
+function getID() {
+    button.addEventListener("click", function () {
+        pokemonID = document.getElementById("input").value;
+        getPokemon();
 
-const pokeName = document.querySelector('.poke-name');
-const pokeId = document.querySelector('.poke-id');
-const pokeImage = document.querySelector('.poke-image');
-const pokeMoveOne = document.querySelector('.poke-move-one');
-const pokeMoveTwo = document.querySelector('.poke-move-two');
-const pokeMoveThree = document.querySelector('.poke-move-three');
-const pokeMoveFour = document.querySelector('.poke-move-four');
+    });
+}
+getID();
 
 
-const api_url = ('https://pokeapi.co/api/v2/pokemon/1');
+function capitalizeLTR(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-async function fetchPokemon() {
+
+async function getPokemon() {
+    let api_url = `https://pokeapi.co/api/v2/pokemon/${pokemonID}`;
     const response = await fetch(api_url);
     const data = await response.json();
-    console.log(data);
+    const { name, id, sprites } = data;
+    document.getElementById("output_name").textContent = `Name: ${capitalizeLTR(name)}`;
+    document.getElementById("output_id").textContent = `ID: #${id}`;
+    document
+        .getElementById("output_img")
+        .setAttribute("src", `${sprites.front_default}`);
 
-fetchPokemon();
+
+    for (let i = 1; i < 6; i++) {
+        let moves = data.moves[i * 6].move.name;
+        let movesLocation = document.getElementById(`move_${i}`);
+        movesLocation.textContent = moves;
+        movesLocation.style.display = "block";
+    }
+}
